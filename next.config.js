@@ -9,7 +9,7 @@ const withTM = require('next-transpile-modules')([
 ])
 const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = module.exports = withPlugins([
+module.exports = withPlugins([
   [
     withTM,
     {
