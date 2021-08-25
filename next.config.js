@@ -1,8 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable */
 const withPlugins = require('next-compose-plugins')
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const withPWA = require('next-pwa')
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const withTM = require('next-transpile-modules')([
   'react-leaflet',
   '@react-leaflet/core'
@@ -24,6 +22,9 @@ module.exports = withPlugins([
       pwa: {
         dest: 'public',
         disable: !isProd
+      },
+      images: {
+        domains: ['media.graphcms.com']
       }
     }
   ]

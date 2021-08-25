@@ -17,7 +17,7 @@ export const Heading = styled.h1`
 `
 
 export const Body = styled.div`
-  world-break: break-all;
+  word-break: break-all;
   p {
     font-size: var(--medium);
     line-height: var(--medium);
