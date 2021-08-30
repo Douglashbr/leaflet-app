@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## APP LEAFLET APP
 
-## Getting Started
+Esse app exibe um mapa onde ficam marcadas as viagens cadastradas dentro de um cms. No mapa as viagens ficam com uma marcação onde o usuário pode clicar nessa marcação e ir para outra página para ver mais informações sobre a viagem.
 
-First, run the development server:
+### 📋 Pré-requisitos
 
+```
+Nodejs 14.0.0
+yarn 1.22.10
+```
+### GraphCMS
+
+Esse projeto utiliza [GraphCMS](https://graphcms.com/), então é necessário que você crie uma conta.
+
+Após criar a conta você deve criar um schema, siga os passos:
+
+- Schema > Adicione novo model com nome `Place`
+- Adicione os seguintes campos:
+  - `Single Line Text` como `name`
+  - `Slug` como `slug`
+  - `Map` como `location`
+  - `Rich Text` como `description`
+  - `Asset Picker` como `gallery`
+
+- Schema > Adicione novo model com nome `Page`
+- Adicione os seguinter campos:
+  - `Single Line Text` como `heading`
+  - `Slug` como `slug`
+  - `Rich Text` como `body`
+
+Após isso, preencha os models com alguns valores e não esqueça de publicar utilizando o `publish`!
+
+#### Autenticação
+
+Para criar um access token, vá à opção `Settings > API Access`, dentro dessa página, encontre `Permanent Auth Tokens`,
+crie um Token Name e mark todas as opções de queries. Após salvar, seu toke estará disponível.
+
+## 🚀 Começando
+
+### Iniciando o projeto
+
+Execute os seguintes comandos para executar o app em sua máquina:
 ```bash
-npm run dev
-# or
-yarn dev
+#Clonar repositório
+$git clone https://github.com/douglashbr/leaflet-app
+#Acessar diretório do repositório clonado
+$cd leaftlet-app
+#Instalar as dependências do projeto
+$yarn
+#Iniciar a aplicação
+$yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Construído com
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Ferramentas que utilizei para criar esse projeto:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+* [yarn](https://yarnpkg.com/)
+* [Typescript](https://www.typescriptlang.org/)
+* [ReactJs](https://pt-br.reactjs.org/)
+* [Nextjs](https://nextjs.org/)
+* [Graphql](https://graphql.org/)
+* [graphql-request](https://github.com/prisma-labs/graphql-request)
+* [styled-components](https://styled-components.com/)
+* [Leaflet](https://leafletjs.com/)
+* [MapBox](https://www.mapbox.com/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Demo disponível no link: [Demo](https://leaflet-app-nine.vercel.app/)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+⌨️ com ❤️ por [Douglas Dantas](https://github.com/douglashbr) 😊
